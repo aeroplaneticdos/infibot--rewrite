@@ -11,6 +11,23 @@ exports.run = async(client,message,args) => {
         question = "nothing"
     }
 
+    if(question === "is g bad") {
+        rList = "yes"
+    }
+    if(question === "g") {
+        rList = "shut up"
+    }
+
+    if(question === "is h bad") {
+        rList = "no"
+    }
+    if(question === "is h good") {
+        rList = "yes"
+    }
+    if(question === "is g good") {
+        rList = "no"
+    }
+
     let emb = new disc.MessageEmbed()
     .setTitle("Question answerer 3000")
     .setThumbnail(client.user.displayAvatarURL({size:64}))
@@ -27,5 +44,6 @@ exports.help = {
 }
 
 exports.conf = {
-    aliases: []
+    aliases: [],
+    cooldown: 2
 }
